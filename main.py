@@ -18,8 +18,11 @@ def check_balance():
 def deposit_money(balance):
     
     deposit=int(input("Enter amount to deposit: "))
+    print("")
+    
     new_balance = balance + deposit
     print(f"Deposit successful. New balance ={new_balance}",end="\n\n")
+    
     return new_balance
 
 
@@ -27,6 +30,7 @@ def deposit_money(balance):
 def withdraw_money(balance):
     
         withdraw_amount=int(input("Enter amount to withdraw: "))
+        print("")
         
         if withdraw_amount>balance:
            print("Insufficient funds!",end="\n\n")
@@ -34,6 +38,7 @@ def withdraw_money(balance):
         else:
             new_balance= balance - withdraw_amount
             print(f"Withdrawal successful. New balance = {new_balance}",end="\n\n")
+            
             return new_balance
 
 
@@ -56,13 +61,20 @@ print(f"Your balance is {balance}",end="\n\n")
 
 while atm_status:
     
+# Show Menu
+    
     menu()
+    
+    # Try if the user input an invalid amount 
     
     try:
         
+     # Ask for your  Choice
         user_choice= input("Choose an option: ")
         print("")
         
+     # Verify choice
+     
         if user_choice == "1":
             check_balance()
             
@@ -78,8 +90,7 @@ while atm_status:
             
         else:
             print("Invalid choice. Please enter a valid option",end="\n\n")
+    
             
     except ValueError:
         print("Invalid Input. Retry.",end="\n\n")    
-
-    
