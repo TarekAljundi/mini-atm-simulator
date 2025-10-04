@@ -91,4 +91,5 @@ while True:
     
             
     except ValueError:
+        print("")
         print("Invalid Input. Retry.",end="\n\n")    
