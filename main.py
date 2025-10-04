@@ -49,8 +49,6 @@ def exit():
 # Variables
 
 balance=1000
-atm_status=True
-
 
 # Start of mini ATM
 
@@ -59,7 +57,7 @@ print(f"Your balance is {balance}",end="\n\n")
 
 
 
-while atm_status:
+while True:
     
 # Show Menu
     
@@ -86,7 +84,7 @@ while atm_status:
             
         elif user_choice == "4":
             exit()
-            atm_status = False
+            break
             
         else:
             print("Invalid choice. Please enter a valid option",end="\n\n")
